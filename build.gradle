@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+		google()
+        jcenter() 
+}
+
+def gdxVersion = '1.9.11-SNAPSHOT'
+def aiVersion = '1.8.2'
+
+dependencies {
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    implementation group: 'com.badlogicgames.gdx', name: 'gdx-ai', version: aiVersion
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
