@@ -1,12 +1,13 @@
 package com.tpwar.game.maps.pathfinding;
 
-import com.badlogic.gdx.ai.pfa.Connection;
 import com.badlogic.gdx.ai.pfa.DefaultGraphPath;
-import com.badlogic.gdx.ai.pfa.indexed.IndexedGraph;
-import com.badlogic.gdx.utils.Array;
+import com.tpwar.game.astar.Connection;
+import com.tpwar.game.astar.Graph;
 import com.tpwar.game.maps.Tpmap;
 
-public class TiledGraph extends DefaultGraphPath<TiledNode> implements IndexedGraph<TiledNode> {
+import java.util.ArrayList;
+
+public class TiledGraph extends DefaultGraphPath<TiledNode> implements Graph<TiledNode> {
 
 	public int width = 20;
 	public int height = 15;
@@ -67,7 +68,7 @@ public class TiledGraph extends DefaultGraphPath<TiledNode> implements IndexedGr
 	}
 
 	@Override
-	public Array<Connection<TiledNode>> getConnections(TiledNode fromNode) {
+	public ArrayList<Connection<TiledNode>> getConnections(TiledNode fromNode) {
 		return fromNode.connections;
 	}
 

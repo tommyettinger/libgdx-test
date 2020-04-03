@@ -1,6 +1,6 @@
 package com.tpwar.game.maps.pathfinding;
 
-import com.badlogic.gdx.ai.pfa.Heuristic;
+import com.tpwar.game.astar.Heuristic;
 
 public class TiledManhattanDistance<N extends TiledNode> implements Heuristic<N> {
 

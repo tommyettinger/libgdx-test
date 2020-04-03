@@ -1,6 +1,6 @@
 package com.tpwar.game.maps.pathfinding;
 
-import com.badlogic.gdx.ai.pfa.DefaultConnection;
+import com.tpwar.game.astar.DefaultConnection;
 
 public class TiledConnection extends DefaultConnection<TiledNode> {
 

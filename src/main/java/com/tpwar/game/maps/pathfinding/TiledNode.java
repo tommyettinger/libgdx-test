@@ -1,7 +1,8 @@
 package com.tpwar.game.maps.pathfinding;
 
-import com.badlogic.gdx.ai.pfa.Connection;
-import com.badlogic.gdx.utils.Array;
+import com.tpwar.game.astar.Connection;
+
+import java.util.ArrayList;
 
 public class TiledNode {
 
@@ -12,7 +13,7 @@ public class TiledNode {
 	public long rightZoneId;
 	public boolean walkable;
 
-	public Array<Connection<TiledNode>> connections = new Array<>(4);
+	public ArrayList<Connection<TiledNode>> connections = new ArrayList<>(4);
 	
 	private int height;
 	public TiledNode(int x, int y, int height) {
