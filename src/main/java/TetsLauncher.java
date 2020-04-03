@@ -1,5 +1,5 @@
+import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.badlogic.gdx.backends.lwjgl.LwjglFrame;
 
 public class TetsLauncher {
 	public static void main(String[] args) {
@@ -8,6 +8,6 @@ public class TetsLauncher {
 		config.title = "test";
 		config.fullscreen = false;
 		config.resizable = false;
-		new LwjglFrame(new BinaryHeapTest(), config);
+		new LwjglApplication(new BinaryHeapTest(), config);
 	}
 }
